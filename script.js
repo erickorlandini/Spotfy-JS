@@ -5,6 +5,7 @@ const cover = document.getElementById('cover');
 const play = document.getElementById('play');
 const next = document.getElementById('next');
 const previous = document.getElementById('previous');
+const likeButton = document.getElementById('like');
 const currentProgress = document.getElementById('current-progress');
 const progressContainer = document.getElementById('progress-container');
 const shuffleButton = document.getElementById('shuffle');
@@ -15,17 +16,20 @@ const totalTime = document.getElementById('total-time');
 const noPole = {
     songName : 'No pole',
     artist : 'Don Toliver',
-    file : 'No_Pole'
+    file : 'No_Pole',
+    liked: true
 }
 const toreUp = {
     songName : 'Tore Up',
     artist : 'Don Toliver',
-    file : 'Tore_Up'
+    file : 'Tore_Up',
+    liked: false
 }
 const noIdea = {
     songName : 'No Idea',
     artist : 'Don Toliver',
-    file : 'No_Idea'
+    file : 'No_Idea',
+    liked: false
 }
 let isPlaying = false;
 let isShuffled = false;
@@ -56,11 +60,25 @@ function playPauseDecider() {
     }
 }
 
+
+function likeButtonRender() {
+    if (sortedPlaylist[index].liked === true) {
+        likeButton.querySelector('.bi').classList.remove('bi-heart');
+        likeButton.querySelector('.bi').classList.add('bi-heart-fill');
+        likeButton.classList.add('button-active');
+    } else {
+        likeButton.querySelector('.bi').classList.add('bi-heart');
+        likeButton.querySelector('.bi').classList.remove('bi-heart-fill');
+        likeButton.classList.remove('button-active');
+    }
+}
+
 function initializeSong() {
     cover.src = `images/${sortedPlaylist[index].file}.png`;
     song.src = `songs/${sortedPlaylist[index].file}.mp3`;
     songName.innerText = sortedPlaylist[index].songName;
     bandName.innerText = sortedPlaylist[index].artist;
+    likeButtonRender();
 }
 
 function previousSong() {
