@@ -34,7 +34,7 @@ const noIdea = {
 let isPlaying = false;
 let isShuffled = false;
 let repeatOn = false;
-const originalPlaylist = [noPole, toreUp, noIdea];
+const originalPlaylist = JSON.parse(localStorage.getItem('playlist')) ?? [noPole, toreUp, noIdea];
 let sortedPlaylist = [...originalPlaylist];
 let index = 0;
 
@@ -168,6 +168,16 @@ function updateTotalTime() {
     totalTime.innerText = toHHMMSS(song.duration);
 }
 
+function likeButtonClicked() {
+    if(sortedPlaylist[index].liked === false) {
+        sortedPlaylist[index].liked = true;
+    } else {
+        sortedPlaylist[index].liked = false;
+    }
+    likeButtonRender();
+    localStorage.setItem('playlist', JSON.stringify(originalPlaylist));
+}
+
 initializeSong();
 
 play.addEventListener('click', playPauseDecider);
@@ -179,3 +189,4 @@ song.addEventListener('loadedmetadata', updateTotalTime);
 progressContainer.addEventListener('click', jumpTo);
 shuffleButton.addEventListener('click', shuffleButtonClicked);
 repeatButton.addEventListener('click', repeatButtonClicked);
+likeButton.addEventListener('click', likeButtonClicked);
