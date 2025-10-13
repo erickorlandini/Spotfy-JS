@@ -157,11 +157,11 @@ function nextOrRepeat() {
 }
 
 function toHHMMSS(originalNumber) { 
-    let hours = Math.floor(originalNumber / 3600);
+    let hours = Math.floor(originalNumber / 3600); // caso queira houras no temporizador
     let min = Math.floor((originalNumber - hours * 3600) / 60);
     let secs = Math.floor(originalNumber - hours * 3600 - min * 60);
 
-    return `${hours.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${secs.toString.padStart(2, '0')}`;
+    return `${min.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
 function updateTotalTime() {
