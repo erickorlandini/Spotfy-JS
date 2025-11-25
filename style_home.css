@@ -44,3 +44,81 @@ body {
     border-radius: 8px;
     padding: 16px;
 }
+
+/* Estilos de links de navegação */
+.nav-item {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-item i {
+    font-size: 24px;
+}
+
+.nav-item:hover {
+    color: var(--color-white);
+}
+
+.nav-section .nav-item:first-child {
+    color: var(--color-white); 
+}
+
+/* Seção da Biblioteca */
+.library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.library-title {
+    font-size: 16px;
+    color: var(--color-light-gray);
+}
+
+.library-header i {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--color-light-gray);
+}
+
+/* Cards de Ação na Sidebar */
+.create-playlist-card, .podcast-card {
+    background-color: var(--color-medium-gray);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.create-playlist-card h4, .podcast-card h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.create-playlist-card p, .podcast-card p {
+    font-size: 14px;
+    color: var(--color-light-gray);
+    margin-bottom: 16px;
+}
+
+.create-button {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 500px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.create-button:hover {
+    transform: scale(1.05);
+}
