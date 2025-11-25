@@ -122,3 +122,47 @@ body {
 .create-button:hover {
     transform: scale(1.05);
 }
+
+/* Footer da Sidebar */
+.sidebar-footer {
+    margin-top: 20px;
+    padding: 0 16px;
+    font-size: 10px;
+    color: var(--color-light-gray);
+}
+
+.sidebar-footer a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.2s;
+}
+
+.sidebar-footer a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+.language-button {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-light-gray);
+    padding: 8px 16px;
+    border-radius: 500px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 2. CONTEÚDO PRINCIPAL (MAIN CONTENT) */
+.main-content {
+    flex-grow: 1;
+    background-color: var(--color-dark-gray);
+    border-radius: 8px; 
+    margin: 8px 8px 0 0; 
+    position: relative; 
+    overflow: hidden; 
+}
