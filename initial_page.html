@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +7,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style_home.css">
 </head>
-
 <body>
 
     <div class="main-container">
-
         <div class="sidebar">
             <div class="nav-section">
-                <a href="#" class="nav-item">
-                    <i class="bi bi-house-door-fill"></i> Início
-                </a>
-                <a href="#" class="nav-item">
-                    <i class="bi bi-search"></i> Pesquisar
-                </a>
+                <a href="#" class="nav-item active"><i class="bi bi-house-door-fill"></i> Início</a>
+                <a href="#" class="nav-item"><i class="bi bi-search"></i> Pesquisar</a>
             </div>
 
             <div class="library-section">
@@ -28,7 +21,7 @@
                     <h2 class="library-title"><i class="bi bi-collection-play"></i> Sua Biblioteca</h2>
                     <i class="bi bi-plus-lg"></i>
                 </div>
-
+                
                 <div class="scroll-sidebar">
                     <div class="create-playlist-card">
                         <h4>Crie sua primeira playlist</h4>
@@ -42,7 +35,7 @@
                         <button class="create-button">Explorar podcasts</button>
                     </div>
                 </div>
-
+                
                 <div class="sidebar-footer">
                     <p><a href="#">Legal</a> <a href="#">Segurança</a> <a href="#">Cookies</a></p>
                     <button class="language-button"><i class="bi bi-globe"></i> Português do Brasil</button>
@@ -51,30 +44,31 @@
         </div>
 
         <div class="main-content">
-
             <header class="main-header">
-                <div class="header-nav">
+                <div class="header-left">
                     <button class="nav-btn"><i class="bi bi-chevron-left"></i></button>
                     <button class="nav-btn"><i class="bi bi-chevron-right"></i></button>
-                    <div class="searc-bar">
+                </div>
+
+                <div class="header-center">
+                    <button class="home-btn"><i class="bi bi-house-door-fill"></i></button>
+                    <div class="search-bar">
                         <i class="bi bi-search"></i>
                         <input type="text" placeholder="O que você quer ouvir?">
                     </div>
                 </div>
 
-                <div class="header-actions">
-                    <a href="#" class="action-link">Premium</a>
-                    <a href="#" class="action-link">Suporte</a>
-                    <a href="#" class="action-link">Baixar</a>
+                <div class="header-right">
+                    <a href="#" class="action-link hide-mobile">Premium</a>
+                    <a href="#" class="action-link hide-mobile">Suporte</a>
+                    <a href="#" class="action-link hide-mobile">Baixar</a>
                     <span class="separator">|</span>
-                    <a href="#" class="action-link">Instalar aplicativo</a>
-                    <a href="#" class="action-link">Inscrever-se</a>
+                    <button class="signup-btn">Inscrever-se</button>
                     <button class="login-button">Entrar</button>
                 </div>
             </header>
 
             <div class="content-sections">
-
                 <section class="music-section">
                     <div class="section-header">
                         <h2>Músicas em alta</h2>
